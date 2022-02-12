@@ -20,6 +20,7 @@ export const PunctuationQuestion = ({ interests, onSubmit }) => {
         rows={1}
         onChange={handleChange}
         className={isWrong ? styles.wrong : ""}
+        disabled={isWrong}
       />
 
       {isWrong ? (
@@ -28,6 +29,7 @@ export const PunctuationQuestion = ({ interests, onSubmit }) => {
             value={question.correctAnswer}
             rows={1}
             className={styles.correct}
+            disabled
           />
           <div
             style={{ display: "flex", justifyContent: "center", marginTop: 24 }}
@@ -53,7 +55,6 @@ export const PunctuationQuestion = ({ interests, onSubmit }) => {
     if (question.checkIsCorrect(answer)) {
       onSubmit(true);
     } else {
-      console.log({ correct: question.correctAnswer, answer });
       setIsWrong(true);
     }
   }

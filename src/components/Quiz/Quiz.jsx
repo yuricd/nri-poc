@@ -21,7 +21,15 @@ export const Quiz = () => {
     setResults((prev) => {
       return [...prev, result];
     });
-    setCurrent((prev) => prev + 1);
+    setCurrent((prev) => {
+      const next = prev + 1;
+
+      if (next >= questionsLen) {
+        navigate("/results");
+        return <></>;
+      }
+      return next;
+    });
   };
 
   const questions = useMemo(
@@ -45,12 +53,6 @@ export const Quiz = () => {
   );
 
   const questionsLen = Object.values(questions).length;
-
-  console.log({ current, questionsLen });
-
-  if (current >= questionsLen) {
-    navigate("/results");
-  }
 
   if (interests.length > 0) {
     return (

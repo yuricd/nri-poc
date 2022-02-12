@@ -12,7 +12,12 @@ export const Home = () => {
   return (
     <div className={styles.home}>
       <ChooseInterest />
-      {interests.length > 0 && <Button onClick={handleClick}>Start!</Button>}
+
+      {interests.length > 0 && (
+        <div className={styles.bottom}>
+          <Button onClick={handleClick}>Start!</Button>
+        </div>
+      )}
     </div>
   );
 
