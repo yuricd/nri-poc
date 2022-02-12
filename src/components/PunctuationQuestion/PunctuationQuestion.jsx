@@ -10,15 +10,38 @@ export const PunctuationQuestion = ({ interests, onSubmit }) => {
   const question = Question(pickedName);
 
   const [answer, setAnswer] = useState(question.sentence);
+  const [isWrong, setIsWrong] = useState(false);
 
   return (
     <div>
       <p className={styles.statement}>{question.statement}</p>
-      <textarea value={answer} rows={1} onChange={handleChange} />
+      <textarea
+        value={answer}
+        rows={1}
+        onChange={handleChange}
+        className={isWrong ? styles.wrong : ""}
+      />
 
-      <div style={{ display: "flex", justifyContent: "center", marginTop: 24 }}>
-        <Button onClick={handleSubmit}>Submit</Button>
-      </div>
+      {isWrong ? (
+        <>
+          <textarea
+            value={question.correctAnswer}
+            rows={1}
+            className={styles.correct}
+          />
+          <div
+            style={{ display: "flex", justifyContent: "center", marginTop: 24 }}
+          >
+            <Button onClick={() => onSubmit(false)}>Continue</Button>
+          </div>
+        </>
+      ) : (
+        <div
+          style={{ display: "flex", justifyContent: "center", marginTop: 24 }}
+        >
+          <Button onClick={handleSubmit}>Submit</Button>
+        </div>
+      )}
     </div>
   );
 
@@ -31,7 +54,7 @@ export const PunctuationQuestion = ({ interests, onSubmit }) => {
       onSubmit(true);
     } else {
       console.log({ correct: question.correctAnswer, answer });
-      onSubmit(false);
+      setIsWrong(true);
     }
   }
 };

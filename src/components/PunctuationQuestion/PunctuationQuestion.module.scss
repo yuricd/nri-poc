@@ -1,3 +1,19 @@
+@import "../../styles/color.scss";
+
 .statement {
   margin-bottom: 24px;
+}
+
+textarea {
+  &.wrong {
+    border: 2px solid $red;
+    color: $red;
+    background: rgba($color: $red, $alpha: 0.1);
+  }
+
+  &.correct {
+    border: 2px solid $green2;
+    color: $green2;
+    background: rgba($color: $green2, $alpha: 0.1);
+  }
 }
