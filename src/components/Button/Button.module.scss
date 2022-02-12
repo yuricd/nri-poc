@@ -1,0 +1,14 @@
+@import "../../styles/color.scss";
+
+.btn {
+  background-color: $primary-blue;
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 12px 24px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}

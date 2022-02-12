@@ -1,0 +1,38 @@
+@import "../../styles/color.scss";
+
+.quiz {
+  margin-top: 100px;
+}
+
+.questionCounter {
+  margin-top: 8px;
+  margin-bottom: 24px;
+
+  span {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: $grey1;
+    color: $grey2;
+    margin-right: 4px;
+    border-radius: 100px;
+  }
+
+  .current {
+    background: $grey2;
+    color: #fff;
+  }
+
+  .correct {
+    background: $green;
+    color: #fff;
+  }
+
+  .wrong {
+    background: $red;
+    color: #fff;
+  }
+}
