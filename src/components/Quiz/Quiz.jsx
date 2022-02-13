@@ -50,6 +50,14 @@ export const Quiz = () => {
           onSubmit={handleResult}
         />
       ),
+      2: (
+        <ClickQuestion
+          key={3}
+          interests={interests}
+          type="verbs"
+          onSubmit={handleResult}
+        />
+      ),
     }),
     [interests]
   );

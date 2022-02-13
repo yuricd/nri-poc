@@ -6,4 +6,11 @@ export const clickQuestions = {
       correctAnswer: ["beautiful", "big", "delicious"],
     },
   ],
+  verbs: [
+    {
+      sentenceTail:
+        "enjoy playing with children and old people. I think it is marvelous.",
+      correctAnswer: ["enjoy", "playing", "think", "is"],
+    },
+  ],
 };
