@@ -49,6 +49,7 @@ textarea {
   border-radius: 8px;
   transition: all ease 0.1s;
   border-bottom: 3px solid $grey2;
+  margin-bottom: 8px;
 
   &.selected {
     border-color: $grey3;

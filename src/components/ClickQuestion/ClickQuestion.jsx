@@ -74,7 +74,7 @@ export const ClickQuestion = ({ interests, type, onSubmit }) => {
   }
 
   function pickQuestion(type) {
-    const len = Object.keys(clickQuestions).length;
+    const len = clickQuestions[type].length;
     const rand = Math.floor(Math.random() * len);
     return clickQuestions[type][rand];
   }
