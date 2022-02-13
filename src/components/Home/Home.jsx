@@ -7,7 +7,7 @@ import styles from "./Home.module.scss";
 
 export const Home = () => {
   const navigate = useNavigate();
-  const { interests, setInterests } = useContext(InterestsContext);
+  const { interests } = useContext(InterestsContext);
 
   return (
     <div className={styles.home}>

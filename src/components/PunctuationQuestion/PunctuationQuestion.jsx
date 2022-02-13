@@ -14,13 +14,16 @@ export const PunctuationQuestion = ({ interests, onSubmit }) => {
 
   return (
     <div>
-      <p className={styles.statement}>{question.statement}</p>
+      <p className={styles.statement} data-testid="questionStatement">
+        {question.statement}
+      </p>
       <textarea
         value={answer}
         rows={1}
         onChange={handleChange}
         className={isWrong ? styles.wrong : ""}
         disabled={isWrong}
+        data-testid="selectBox"
       />
 
       {isWrong ? (
@@ -32,12 +35,19 @@ export const PunctuationQuestion = ({ interests, onSubmit }) => {
             disabled
           />
           <div className={styles.bottom}>
-            <Button onClick={() => onSubmit(false)}>Continue</Button>
+            <Button
+              onClick={() => onSubmit(false)}
+              dataTestId="questionContinue"
+            >
+              Continue
+            </Button>
           </div>
         </>
       ) : (
         <div className={styles.bottom}>
-          <Button onClick={handleSubmit}>Submit</Button>
+          <Button onClick={handleSubmit} dataTestId="questionSubmit">
+            Submit
+          </Button>
         </div>
       )}
     </div>

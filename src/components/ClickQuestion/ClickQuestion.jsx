@@ -19,9 +19,11 @@ export const ClickQuestion = ({ interests, type, onSubmit }) => {
 
   return (
     <div>
-      <p className={styles.statement}>{question.statement}</p>
+      <p className={styles.statement} data-testid="questionStatement">
+        {question.statement}
+      </p>
 
-      <div className={styles.selectBox}>
+      <div className={styles.selectBox} data-testid="selectBox">
         {question.sentence.split(" ").map((w, idx) => (
           <button
             key={idx}
@@ -46,12 +48,19 @@ export const ClickQuestion = ({ interests, type, onSubmit }) => {
             disabled
           />
           <div className={styles.bottom}>
-            <Button onClick={() => onSubmit(false)}>Continue</Button>
+            <Button
+              onClick={() => onSubmit(false)}
+              dataTestId="questionContinue"
+            >
+              Continue
+            </Button>
           </div>
         </>
       ) : (
         <div className={styles.bottom}>
-          <Button onClick={handleSubmit}>Submit</Button>
+          <Button onClick={handleSubmit} dataTestId="questionSubmit">
+            Submit
+          </Button>
         </div>
       )}
     </div>
@@ -61,7 +70,7 @@ export const ClickQuestion = ({ interests, type, onSubmit }) => {
     if (answer.includes(word)) {
       setAnswer((prev) => prev.filter((w) => w !== word));
     } else {
-      setAnswer((prev) => [...prev, word]);
+      setAnswer((prev) => [...prev, trim(word).replace(/[.,]/g, "")]);
     }
   }
 

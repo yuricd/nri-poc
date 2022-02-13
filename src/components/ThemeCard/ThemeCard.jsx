@@ -5,6 +5,7 @@ export const ThemeCard = ({ title, image, selected, onClick }) => {
     <div
       className={[styles.themeCard, selected && styles.selected].join(" ")}
       onClick={onClick}
+      data-testid="themeCard"
     >
       <figure className={styles.figure}>
         <div className={styles.image}>

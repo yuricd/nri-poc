@@ -14,7 +14,7 @@ export const ChooseInterest = () => {
         What are your <span className={styles.highlight}>interests</span>?
       </h1>
 
-      <div className={styles.cardsContainer}>
+      <div className={styles.cardsContainer} data-testid="cardsContainer">
         {Object.entries(themes).map(([key, values]) => {
           const { title, image } = values;
 

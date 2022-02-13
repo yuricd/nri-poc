@@ -11,7 +11,7 @@ describe("InterestUtils", () => {
       expect(picked).toBe("HarryPotter");
     });
     it("pick an interest of two", () => {
-      const interests = ["HarryPotter", "TaylorSwift"];
+      const interests = ["HarryPotter", "PopSingers"];
       const util = InterestUtils(interests);
       const picked = util.pickInterest();
 
@@ -19,7 +19,7 @@ describe("InterestUtils", () => {
     });
 
     it("pick an interest of two", () => {
-      const interests = ["HarryPotter", "TaylorSwift", "StarWars"];
+      const interests = ["HarryPotter", "PopSingers", "StarWars"];
       const util = InterestUtils(interests);
       const picked = util.pickInterest();
 
@@ -38,7 +38,7 @@ describe("InterestUtils", () => {
     });
 
     it("pick a name from theme having two interests", () => {
-      const interests = ["HarryPotter", "Star Wars"];
+      const interests = ["HarryPotter", "StarWars"];
 
       const util = InterestUtils(interests);
       const interest = util.pickInterest();
