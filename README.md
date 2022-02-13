@@ -2,6 +2,7 @@
 
 This project implements an application that aims to provide an enjoyable way to learn English.
 The user can choose his/her interests, and the questions are assembled based on the given choices.
+The application is avalabile at [nri.yuridelgado.dev](https://nri.yuridelgado.dev).
 
 ## Running
 
@@ -13,5 +14,14 @@ No other requirements needed. The backend and storage are both mocked internally
 
 ## Testing
 
-The application has some unit and integrations tests that can be run with `yarn test`.
-I've also implemented some E2E that can be run with `yarn test:e2e`.
+The application has some unit and integrations tests that can be run with
+
+```
+yarn test
+```
+
+I've also implemented some E2E that can be run with
+
+```
+yarn test:e2e
+```
