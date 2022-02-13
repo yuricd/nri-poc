@@ -39,7 +39,7 @@ export const themes = {
       "Peter Parker",
       "Bruce Banner",
       "Tony Stark",
-      " T'Challa",
+      "T'Challa",
       "Dr. Otto Octavius",
     ],
     image: require("../assets/marvel.jpg"),
