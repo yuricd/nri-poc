@@ -16,7 +16,7 @@ export const clickQuestions = {
       correctAnswer: ["great"],
     },
     {
-      sentenceTail: "is very loyal to my family.",
+      sentenceTail: "is very loyal to their family.",
       correctAnswer: ["loyal"],
     },
     {

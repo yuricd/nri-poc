@@ -73,7 +73,6 @@ export const Quiz = () => {
             {Array(questionsLen)
               .fill(0)
               .map((_, idx) => {
-                console.log({ results });
                 const _class = getQColor(idx);
 
                 return (
