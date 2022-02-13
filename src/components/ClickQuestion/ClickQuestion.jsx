@@ -10,7 +10,7 @@ export const ClickQuestion = ({ interests, type, onSubmit }) => {
   const interestAndName = useMemo(() => utils.pickInterestAndName(), []);
   const pickedName = interestAndName[1];
 
-  const { sentenceTail, correctAnswer } = pickQuestion(type);
+  const { sentenceTail, correctAnswer } = useMemo(() => pickQuestion(type), []);
 
   const question = Question(pickedName, type, sentenceTail, correctAnswer);
 
