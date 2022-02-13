@@ -1,0 +1,60 @@
+@import "../../styles/color.scss";
+
+.statement {
+  margin-bottom: 24px;
+}
+
+textarea {
+  &.wrong {
+    border: 2px solid $red;
+    color: $red;
+    background: rgba($color: $red, $alpha: 0.1);
+  }
+
+  &.correct {
+    border: 2px solid $green2;
+    color: $green2;
+    background: rgba($color: $green2, $alpha: 0.1);
+  }
+}
+
+.selectBox {
+  margin-bottom: 24px;
+  width: 100%;
+  background: #fff;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2rem;
+  color: $default-grey;
+  font-weight: 600;
+  resize: none;
+  border: 1px solid $grey1;
+  text-align: center;
+  padding: 36px 24px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.clickable {
+  display: inline-block;
+  padding: 4px 8px;
+  background: $grey1;
+  cursor: pointer;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2rem;
+  border: 1px solid $grey1;
+  border-radius: 8px;
+  transition: all ease 0.1s;
+  border-bottom: 3px solid $grey2;
+
+  &.selected {
+    border-color: $grey3;
+  }
+
+  &.isWrong {
+    border-color: $red;
+  }
+}

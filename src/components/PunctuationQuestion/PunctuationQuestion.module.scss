@@ -17,3 +17,9 @@ textarea {
     background: rgba($color: $green2, $alpha: 0.1);
   }
 }
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}

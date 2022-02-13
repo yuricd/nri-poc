@@ -31,16 +31,12 @@ export const PunctuationQuestion = ({ interests, onSubmit }) => {
             className={styles.correct}
             disabled
           />
-          <div
-            style={{ display: "flex", justifyContent: "center", marginTop: 24 }}
-          >
+          <div className={styles.bottom}>
             <Button onClick={() => onSubmit(false)}>Continue</Button>
           </div>
         </>
       ) : (
-        <div
-          style={{ display: "flex", justifyContent: "center", marginTop: 24 }}
-        >
+        <div className={styles.bottom}>
           <Button onClick={handleSubmit}>Submit</Button>
         </div>
       )}

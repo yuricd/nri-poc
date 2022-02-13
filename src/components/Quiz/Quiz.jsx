@@ -1,6 +1,7 @@
 import { useContext, useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { InterestsContext } from "../../App";
+import { ClickQuestion } from "../ClickQuestion/ClickQuestion";
 import { PunctuationQuestion } from "../PunctuationQuestion/PunctuationQuestion";
 import { Wrapper } from "../Wrapper/Wrapper";
 import styles from "./Quiz.module.scss";
@@ -35,9 +36,10 @@ export const Quiz = () => {
   const questions = useMemo(
     () => ({
       0: (
-        <PunctuationQuestion
+        <ClickQuestion
           key={1}
           interests={interests}
+          type="adjectives"
           onSubmit={handleResult}
         />
       ),
