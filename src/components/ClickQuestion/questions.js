@@ -8,7 +8,7 @@ export const clickQuestions = {
     {
       sentenceTail:
         "bought a pair of new shoes. I saw them, and they are small and colorful.",
-      correctAnswer: ["new", "small", "colorful"],
+      correctAnswer: ["new", "small", "colorful."],
     },
     {
       sentenceTail:

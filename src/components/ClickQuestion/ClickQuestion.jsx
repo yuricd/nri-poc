@@ -70,7 +70,7 @@ export const ClickQuestion = ({ interests, type, onSubmit }) => {
     if (answer.includes(word)) {
       setAnswer((prev) => prev.filter((w) => w !== word));
     } else {
-      setAnswer((prev) => [...prev, word.replace(/[.,]/g, "")]);
+      setAnswer((prev) => [...prev, word]);
     }
   }
 
@@ -96,7 +96,7 @@ const Question = (themeName, type, sentenceTail, correctList) => {
   const correctAnswer = correctList;
 
   function checkIsCorrect(givenAnswer) {
-    return isEqual(givenAnswer, correctAnswer);
+    return isEqual(givenAnswer.sort(), correctAnswer.sort());
   }
 
   return { statement, sentence, checkIsCorrect, correctAnswer };
