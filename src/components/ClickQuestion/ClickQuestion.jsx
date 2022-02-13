@@ -70,7 +70,7 @@ export const ClickQuestion = ({ interests, type, onSubmit }) => {
     if (answer.includes(word)) {
       setAnswer((prev) => prev.filter((w) => w !== word));
     } else {
-      setAnswer((prev) => [...prev, trim(word).replace(/[.,]/g, "")]);
+      setAnswer((prev) => [...prev, word.replace(/[.,]/g, "")]);
     }
   }
 
